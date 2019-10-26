@@ -3,7 +3,7 @@ package com.dandxy.auth
 import java.security.SecureRandom
 import java.util.Base64
 
-import de.mkammerer.argon2.{Argon2Factory, Argon2Helper}
+import de.mkammerer.argon2.{ Argon2Factory, Argon2Helper }
 import profig.Profig
 
 object PasswordAuth {
@@ -35,7 +35,7 @@ object PasswordAuth {
 
   def generateSalt(bytes: Int = saltBytes, strong: Boolean = saltStrong): Salt = {
     val secureRandom = if (strong) SecureRandom.getInstanceStrong else SecureRandom.getInstance(saltWeakAlgorithm)
-    val salt = new Array[Byte](bytes)
+    val salt         = new Array[Byte](bytes)
     secureRandom.nextBytes(salt)
     val base64 = Base64.getEncoder.encodeToString(salt)
     Salt(base64)
@@ -48,8 +48,7 @@ object PasswordAuth {
                    salt: Option[Salt] = None,
                    iterations: Int = this.iterations,
                    memory: Int = this.memory,
-                   parallelism: Int = this.parallelism
-                  ): String =
+                   parallelism: Int = this.parallelism): String =
     argon2.hash(iterations, memory, parallelism, salted(password.value, salt))
 
   def verifyPassword(attemptedPassword: Password, hash: String, salt: Option[Salt] = None): Boolean =

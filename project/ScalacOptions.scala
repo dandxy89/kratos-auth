@@ -1,5 +1,5 @@
-import sbt.Keys.{compile, console, scalacOptions}
-import sbt.{Compile, Def, Task}
+import sbt.Keys.{ compile, console, scalacOptions }
+import sbt.{ Compile, Def, Task }
 
 object ScalacOptions {
 

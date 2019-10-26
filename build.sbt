@@ -17,4 +17,3 @@ IntegrationTest / fork := false
 IntegrationTest / testForkedParallel := false
 publishArtifact := false
 publishArtifact in (Compile, packageBin) := true
-

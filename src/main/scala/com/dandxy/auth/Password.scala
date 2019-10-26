@@ -2,7 +2,7 @@ package com.dandxy.auth
 
 import doobie.util.Meta
 import io.circe.syntax._
-import io.circe.{Decoder, Encoder}
+import io.circe.{ Decoder, Encoder }
 
 final case class Password(value: String) extends AnyVal
 
