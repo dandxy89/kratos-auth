@@ -5,7 +5,7 @@ object ProjectDependencies extends {
   private[this] object Version {
     val argonPass        = "2.5"
     val profigVersion    = "2.3.4"
-    val scalaTestVersion = "3.0.5"
+    val scalaTestVersion = "3.1.0"
   }
 
   def apply(): Seq[ModuleID] = Seq(
