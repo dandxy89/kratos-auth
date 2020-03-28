@@ -4,7 +4,7 @@ object ProjectDependencies extends {
 
   private[this] object Version {
     val argonPass        = "2.6"
-    val profigVersion    = "2.3.7"
+    val profigVersion    = "2.3.8"
     val scalaTestVersion = "3.1.1"
   }
 
